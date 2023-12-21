@@ -5,9 +5,8 @@ Let's denote the original dataset as $\mathcal{D}$ with $N$ examples and $M$ fea
 
 For each $\mathcal{D}_k$, we train a logistic regression model. After training, we obtain the weight vector $\mathbf{w}_k$ and bias vector $\mathbf{b}_k$.
 
-Let $\mathbf{W} = [\mathbf{w}_1, \mathbf{w}_2, \ldots, \mathbf{w}_K]$ be the matrix containing the weight vectors of all logistic regression models.
-
-To make predictions on the whole dataset, we *concatenate* the weights obtained from each logistic regression model and sum up the biases.
+Let $\mathbf{W} = [\mathbf{w}_1, \mathbf{w}_2, \ldots, \mathbf{w}_K]$ be the matrix as a result of concatenating the weight matrices of all logistic regression models.
+And $\mathbf{b} = \mathbf{b}_1 + \mathbf{b}_2 + ... + \mathbf{b}_k$ be the bias vector as a result of summing up the biases of all logistic regression models.
 
 ### Now we can make predictions with this combined model.
 
